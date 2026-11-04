@@ -1,0 +1,26 @@
+[package]
+name = "twitch_surf"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.85"
+description = "surf"
+documentation = "https://docs.rs/twitch_surf"
+repository = "https://github.com/m3idnotfree/twitch_surf"
+license = "MIT OR Apache-2.0"
+keywords = ["twitch"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[workspace]
+members = ["twitch_docs"]
+
+[dependencies]
+serde = { version = "1.0.229", optional = true }
+
+[dev-dependencies]
+serde = { version = "1", features = ["derive"] }
+twitch_docs = { path = "twitch_docs" }
+
+[features]
+serde = ["dep:serde"]
