@@ -1,6 +1,6 @@
 [package]
 name = "twitch_surf"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2024"
 rust-version = "1.85"
 description = "surf"
@@ -12,15 +12,11 @@ keywords = ["twitch"]
 [package.metadata.docs.rs]
 all-features = true
 
-[workspace]
-members = ["twitch_docs"]
-
 [dependencies]
 serde = { version = "1.0.229", optional = true }
 
 [dev-dependencies]
 serde = { version = "1", features = ["derive"] }
-twitch_docs = { path = "twitch_docs" }
 
 [features]
 serde = ["dep:serde"]
